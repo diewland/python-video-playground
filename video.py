@@ -13,7 +13,7 @@ while(cap.isOpened()):
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-    sleep(1/30) # fps
+    sleep(1/20) # fps
 
 cap.release()
 cv2.destroyAllWindows()
