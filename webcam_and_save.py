@@ -2,10 +2,13 @@ import numpy as np
 import cv2
 
 cap = cv2.VideoCapture(0)
+frame_width = int(cap.get(3))
+frame_height = int(cap.get(4))
 
 # Define the codec and create VideoWriter object
-fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter('output.avi',fourcc, 20.0, (640,480))
+#fourcc = cv2.VideoWriter_fourcc(*'XVID') #-- win
+fourcc = cv2.VideoWriter_fourcc('M','J','P','G') #-- mac
+out = cv2.VideoWriter('output.avi',fourcc, 20.0, (frame_width, frame_height))
 
 while(cap.isOpened()):
     ret, frame = cap.read()
