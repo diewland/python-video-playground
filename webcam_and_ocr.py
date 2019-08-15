@@ -15,7 +15,7 @@ while(True):
 
     # ocr
     text = pytesseract.image_to_string(frame)
-    print('='*10)
+    print('='*50)
     print(text)
 
     # Display the resulting frame
